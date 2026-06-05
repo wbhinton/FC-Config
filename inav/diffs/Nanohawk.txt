@@ -1,0 +1,291 @@
+diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.5.3 Apr  4 2026 / 23:20:00 (0e533ba76) MSP API: 1.46
+# config rev: 69f6922
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name EMAX_TINYHAWKF4SX1280
+manufacturer_id EMAX
+mcu_id 005a005e3439511236383737
+signature 
+
+# name: Scout
+
+# feature
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1725 2100 0 0
+aux 1 1 5 1700 2100 0 0
+aux 2 2 5 1325 1725 0 0
+aux 3 13 1 1700 2100 0 0
+aux 4 28 4 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 6 900 1075 12 6 0 0
+adjrange 1 0 6 1100 1275 12 6 0 0
+adjrange 2 0 6 1300 1475 12 6 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 14 20 23 26
+vtxtable powerlabels 25 100 200 400
+
+# master
+set dyn_notch_count = 4
+set acc_calibration = 68,-102,-37,1
+set rc_smoothing_auto_factor = 52
+set fpv_mix_degrees = 30
+set min_throttle = 1069
+set dshot_idle_value = 800
+set dshot_bidir = ON
+set motor_poles = 12
+set failsafe_recovery_delay = 10
+set bat_capacity = 300
+set vbat_max_cell_voltage = 460
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 335
+set vbat_scale = 113
+set ibata_scale = 4333
+set ibata_offset = -500
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 50
+set report_cell_voltage = ON
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 8191
+set osd_vbat_pos = 332
+set osd_rssi_pos = 413
+set osd_link_quality_pos = 2424
+set osd_rssi_dbm_pos = 2392
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 56
+set osd_flymode_pos = 2073
+set osd_g_force_pos = 65
+set osd_throttle_pos = 2411
+set osd_vtx_channel_pos = 52
+set osd_current_pos = 385
+set osd_mah_drawn_pos = 384
+set osd_craft_name_pos = 2049
+set osd_pilot_name_pos = 2059
+set osd_warnings_pos = 2376
+set osd_avg_cell_voltage_pos = 2401
+set osd_battery_usage_pos = 33154
+set osd_disarmed_pos = 74
+set osd_esc_rpm_pos = 161
+set osd_flip_arrow_pos = 2285
+set osd_core_temp_pos = 56
+set osd_canvas_height = 13
+set enable_stick_arming = ON
+set vtx_band = 5
+set vtx_channel = 5
+set vtx_power = 3
+set vtx_low_power_disarm = ON
+set vtx_freq = 5806
+set vcd_video_system = NTSC
+set displayport_msp_fonts = 0,0,0,0
+set gyro_1_sensor_align = CW180FLIP
+set gyro_1_align_pitch = 1800
+set gyro_2_bustype = SPI
+set gyro_2_sensor_align = CW0
+set expresslrs_uid = 90,2,18,128,200,148
+set expresslrs_rate_index = 1
+set rpm_filter_harmonics = 1
+set stats_min_armed_time_s = 5
+set stats_total_flights = 36
+set stats_total_time_s = 864
+set craft_name = Scout
+set pilot_name = Washout
+
+profile 0
+
+# profile 0
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set crash_recovery = ON
+set iterm_rotation = ON
+set throttle_boost = 10
+set p_pitch = 70
+set i_pitch = 125
+set d_pitch = 60
+set f_pitch = 120
+set p_roll = 77
+set i_roll = 123
+set d_roll = 60
+set p_yaw = 70
+set i_yaw = 125
+set angle_p_gain = 90
+set angle_limit = 55
+set horizon_level_strength = 90
+set horizon_limit_sticks = 55
+set d_min_roll = 45
+set d_min_pitch = 45
+set thrust_linear = 40
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+set dyn_idle_min_rpm = 69
+set dyn_idle_p_gain = 40
+set level_race_mode = ON
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 140
+set simplified_d_gain = 115
+set simplified_pi_gain = 120
+set simplified_pitch_d_gain = 105
+set simplified_pitch_pi_gain = 110
+
+profile 1
+
+# profile 1
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set crash_recovery = ON
+set iterm_rotation = ON
+set p_pitch = 70
+set i_pitch = 125
+set d_pitch = 60
+set f_pitch = 120
+set p_roll = 77
+set i_roll = 123
+set d_roll = 60
+set p_yaw = 70
+set i_yaw = 125
+set angle_p_gain = 90
+set angle_limit = 55
+set horizon_level_strength = 90
+set horizon_limit_sticks = 55
+set d_min_roll = 45
+set d_min_pitch = 45
+set thrust_linear = 25
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+set dyn_idle_min_rpm = 100
+set dyn_idle_p_gain = 40
+set level_race_mode = ON
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 140
+set simplified_d_gain = 115
+set simplified_pi_gain = 120
+set simplified_pitch_d_gain = 105
+set simplified_pitch_pi_gain = 110
+
+profile 2
+
+# profile 2
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set crash_recovery = ON
+set iterm_rotation = ON
+set p_pitch = 70
+set i_pitch = 125
+set d_pitch = 60
+set f_pitch = 120
+set p_roll = 77
+set i_roll = 123
+set d_roll = 60
+set p_yaw = 70
+set i_yaw = 125
+set angle_p_gain = 90
+set angle_limit = 55
+set horizon_level_strength = 90
+set horizon_limit_sticks = 55
+set d_min_roll = 45
+set d_min_pitch = 45
+set thrust_linear = 25
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+set dyn_idle_min_rpm = 100
+set dyn_idle_p_gain = 40
+set level_race_mode = ON
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 140
+set simplified_d_gain = 115
+set simplified_pi_gain = 120
+set simplified_pitch_d_gain = 105
+set simplified_pitch_pi_gain = 110
+
+profile 3
+
+# profile 3
+set horizon_level_strength = 50
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 40
+set roll_rc_rate = 21
+set pitch_rc_rate = 21
+set yaw_rc_rate = 21
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 40
+set thr_expo = 35
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 20
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 40
+set thr_expo = 35
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

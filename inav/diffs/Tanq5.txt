@@ -1,0 +1,193 @@
+Entering CLI Mode
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (F722) 2025.12.2 Feb  8 2026 / 09:26:40 (79065c96b) MSP API: 1.47
+# config rev: e378347
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TMOTORF7
+manufacturer_id TMTR
+mcu_id 0045002f3333511230333932
+signature 
+
+# name: Tank
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial UART1 64 115200 57600 0 115200
+serial UART2 131073 115200 57600 0 115200
+serial UART4 2 115200 115200 0 115200
+
+# aux
+aux 0 0 0 1900 2075 1 0
+aux 1 1 5 1950 2100 0 0
+aux 2 2 5 1425 1575 0 0
+aux 3 46 3 1900 2100 0 0
+aux 4 13 1 1700 2100 0 0
+aux 5 26 4 1700 2100 0 0
+aux 6 35 2 1700 2100 1 0
+
+# adjrange
+adjrange 0 0 6 900 1075 12 6 0 0
+adjrange 1 0 6 1125 1300 12 6 0 0
+adjrange 2 0 6 1325 1500 12 6 0 0
+adjrange 3 0 6 1550 1700 12 6 0 0
+adjrange 4 0 6 1900 2100 0 6 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM  5705    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 5
+vtxtable powervalues 14 23 27 30 0
+vtxtable powerlabels 25 200 500 MAX 0
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 600
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 400
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = 71,0,33,1
+set mag_hardware = NONE
+set mag_calibration = -229,-257,-774
+set baro_hardware = NONE
+set rc_smoothing_auto_factor = 70
+set rc_smoothing_auto_factor_throttle = 50
+set fpv_mix_degrees = 25
+set airmode_start_throttle_percent = 20
+set blackbox_sample_rate = 1/8
+set blackbox_disable_mag = ON
+set blackbox_disable_alt = ON
+set blackbox_disable_rssi = ON
+set blackbox_disable_debug = ON
+set dshot_bidir = ON
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set yaw_motors_reversed = ON
+set mag_declination = 35
+set gps_sbas_mode = WAAS
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_allow_arming_without_fix = ON
+set deadband = 6
+set simplified_gyro_filter_multiplier = 120
+set osd_units = IMPERIAL
+set osd_rssi_dbm_alarm = -98
+set osd_vbat_pos = 34
+set osd_link_quality_pos = 3595
+set osd_rssi_dbm_pos = 3563
+set osd_flymode_pos = 3531
+set osd_crosshairs_pos = 2360
+set osd_current_pos = 2562
+set osd_gps_speed_pos = 2578
+set osd_gps_lon_pos = 2144
+set osd_gps_lat_pos = 2112
+set osd_gps_sats_pos = 2176
+set osd_home_dir_pos = 2585
+set osd_home_dist_pos = 2586
+set osd_altitude_pos = 19969
+set osd_avg_cell_voltage_pos = 2530
+set osd_flip_arrow_pos = 2521
+set vtx_band = 5
+set vtx_channel = 5
+set vtx_power = 3
+set vtx_low_power_disarm = ON
+set vtx_freq = 5806
+set rpm_filter_weights = 90,50,90
+set rpm_filter_q = 700
+set craft_name = Tank
+set pilot_name = Washout
+
+profile 0
+
+profile 1
+
+profile 2
+
+# profile 2
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_type = PT3
+set dterm_lpf2_static_hz = 120
+set anti_gravity_gain = 120
+set iterm_relax_cutoff = 10
+set p_pitch = 71
+set i_pitch = 108
+set d_pitch = 49
+set f_pitch = 146
+set p_roll = 56
+set i_roll = 86
+set d_roll = 36
+set f_roll = 117
+set p_yaw = 56
+set i_yaw = 86
+set f_yaw = 117
+set d_max_roll = 36
+set d_max_pitch = 49
+set thrust_linear = 30
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 30
+set simplified_master_multiplier = 115
+set simplified_i_gain = 85
+set simplified_d_gain = 105
+set simplified_pi_gain = 110
+set simplified_d_max_gain = 0
+set simplified_feedforward_gain = 85
+set simplified_pitch_d_gain = 120
+set simplified_pitch_pi_gain = 120
+set simplified_dterm_filter_multiplier = 80
+set tpa_mode = PD
+set tpa_rate = 50
+set tpa_breakpoint = 1250
+set tpa_low_breakpoint = 1100
+set tpa_low_always = ON
+
+profile 3
+
+# restore original profile selection
+profile 2
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 21
+set pitch_rc_rate = 21
+set yaw_rc_rate = 21
+set roll_expo = 57
+set pitch_expo = 57
+set yaw_expo = 57
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
