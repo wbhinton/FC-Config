@@ -1,0 +1,161 @@
+diff all
+
+# version
+# Betaflight / STM32G47X (G473) 2026.6.0-alpha Mar  2 2026 / 15:05:22 (26b3b6761) MSP API: 1.48
+# config rev: e2f254e
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVG473_V2
+manufacturer_id BEFH
+mcu_id 002600403235511730303938
+signature 
+
+# name: A65
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# aux
+aux 0 0 0 1600 2100 0 0
+aux 1 1 5 1700 2100 0 0
+aux 2 2 5 1300 1700 0 0
+aux 3 13 1 1225 2100 0 0
+aux 4 35 2 1550 2100 0 0
+
+# adjrange
+adjrange 0 0 1 900 1200 12 1 0 0
+adjrange 1 0 1 1200 1800 12 1 0 0
+adjrange 2 0 1 1800 2100 12 1 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWRACE  L FACTORY 5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable powerlevels 5
+vtxtable powervalues 1 2 3 4 0
+vtxtable powerlabels 25 100 200 400 PIT
+
+# master
+set dyn_notch_count = 4
+set acc_calibration = -32,-23,-119,1
+set fpv_mix_degrees = 20
+set blackbox_device = NONE
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set align_board_yaw = -45
+set bat_capacity = 300
+set vbat_max_cell_voltage = 460
+set vbat_warning_cell_voltage = 330
+set vbat_scale = 113
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 50
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 8191
+set osd_rssi_alarm = 0
+set osd_rssi_dbm_alarm = -99
+set osd_cap_alarm = 0
+set osd_alt_alarm = 0
+set osd_vbat_pos = 332
+set osd_rssi_pos = 413
+set osd_link_quality_pos = 2424
+set osd_rssi_dbm_pos = 2393
+set osd_tim_1_pos = 2442
+set osd_tim_2_pos = 56
+set osd_remaining_time_estimate_pos = 33
+set osd_flymode_pos = 2080
+set osd_g_force_pos = 65
+set osd_throttle_pos = 2412
+set osd_vtx_channel_pos = 52
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 385
+set osd_mah_drawn_pos = 384
+set osd_craft_name_pos = 2048
+set osd_pilot_name_pos = 2059
+set osd_home_dist_pos = 98
+set osd_flight_dist_pos = 130
+set osd_warnings_pos = 2377
+set osd_avg_cell_voltage_pos = 2401
+set osd_pit_ang_pos = 97
+set osd_rol_ang_pos = 65
+set osd_battery_usage_pos = 33154
+set osd_disarmed_pos = 74
+set osd_esc_tmp_pos = 163
+set osd_esc_rpm_pos = 161
+set osd_flip_arrow_pos = 2317
+set osd_core_temp_pos = 56
+set osd_displayport_device = MAX7456
+set system_hse_mhz = 0
+set vtx_band = 5
+set vtx_channel = 5
+set vtx_power = 1
+set vtx_freq = 5806
+set vcd_video_system = NTSC
+set rpm_filter_harmonics = 1
+set craft_name = A65
+set pilot_name = Washout
+
+profile 0
+
+# profile 0
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set thrust_linear = 25
+set dyn_idle_min_rpm = 65
+set dyn_idle_p_gain = 40
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 140
+set simplified_d_gain = 115
+set simplified_pi_gain = 120
+set simplified_pitch_d_gain = 105
+set simplified_pitch_pi_gain = 110
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 20
+set pitch_rc_rate = 20
+set yaw_rc_rate = 20
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
